@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: productapp1nginxaks 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: productapp1nginxaks
+  template:
+    metadata:
+      labels:
+        app: productapp1nginxaks 
+    spec:
+      containers:
+        - name: productapp1nginxaks 
+          image: dockerhost321.azurecr.io/productapp1nginxaks
+          ports:
+          - containerPort: 80
