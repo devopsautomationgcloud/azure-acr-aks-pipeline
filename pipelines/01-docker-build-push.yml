@@ -14,7 +14,7 @@ variables:
   imageRepository: 'TM/app1nginx'
   containerRegistry: 'dockerhost321.azurecr.io'
   dockerfilePath: '$(Build.SourcesDirectory)/Dockerfile'
-  # Check Build.sourcid
+  # Check Build.sourceversion
   tag: '$(Build.BuildId)'
   
   # Agent VM image name
